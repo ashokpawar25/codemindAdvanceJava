@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>looping statements</title>
+</head>
+<body>
+	<h1 th:text="${list}"></h1>
+	<ul>
+		<li th:each="n, status : ${list}">
+			<span th:text="${status.index}+' '+${n}"></span>
+		</li>
+	</ul>
+	
+	
+	<ul>
+		<li th:each="n, status : ${list}">
+			<span th:style="${status.odd} ? 'font-weight:bold' : ' ' " th:text="${n}"></span>
+		</li>
+	</ul>
+</body>
+</html>

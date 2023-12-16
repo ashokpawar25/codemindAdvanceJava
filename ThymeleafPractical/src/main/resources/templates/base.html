@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.thymeleaf.org" th:fragment="layout(content)">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body
+	
+		<header>
+			<h1>this is header of base class</h1>
+		</header>
+		
+		<main>
+			<h1>copied content from the child</h1>
+			<div th:replace="${content}">
+				<h1>this is original main of the base class</h1>
+			</div>
+		</main>
+		
+		<fotter>
+			<h1>this is footer of the base class</h1>
+		</fotter>
+	
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>conditional statement</title>
+</head>
+<body>
+	<h1>user is <span th:style="${isActive} ? 'color:blue' : 'color:red'" th:text="${isActive} ? 'AVTIVE' : 'NOT ACTIVE'"></span></h1>
+	
+	<h1 th:if="${gender}=='M'">Male</h1>
+	<h1 th:unless="${gender}=='M'">Female</h1>
+	
+	<div th:switch="${#lists.size(list)}">
+		<h th:case="'0'">zero element</h>
+		<h th:case="'1'">one element</h>
+		<h th:case="*">more than one elements</h>
+	</div>
+	
+</body>
+</html>
